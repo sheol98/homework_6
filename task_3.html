@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача №3</title>
+  </head>
+  <body>
+    <h1>
+      11. Комп’ютер загадує випадкове число від 1 до 10. Вгадати число шляхом
+      введеня можливих варіантів. В кінці вивести кількість спроб користувача.
+    </h1>
+    <script>
+      const rangeStart = 1;
+      const rangeEnd = 10;
+      let attempt = 0;
+      const compRandomNum =
+        rangeStart + Math.floor(Math.random() * (rangeEnd - rangeStart + 1));
+				let userAns =0
+				while (userAns!==compRandomNum) {
+					userAns=parseInt(prompt('Вгадайте число від 1 до 10'))
+					attempt++
+				}
+				alert(`Ви вгадали за ${attempt} спроби`)
+    </script>
+  </body>
+</html>

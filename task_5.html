@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача №5</title>
+  </head>
+  <body>
+    <h1>
+      З клавіатури вводитяться числа поки не буде введено 0. Знайти добуток
+      чисел.
+    </h1>
+    <script>
+      let muliplication = 1;
+
+      while (true) {
+        const userNum = parseInt(prompt("Введіть число"));
+        if (userNum === 0) break;
+        muliplication = muliplication * userNum;
+      }
+      document.write(`<h2>Добуток становить ${muliplication}</h2>`);
+    </script>
+  </body>
+</html>

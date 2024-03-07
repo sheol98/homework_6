@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача №4</title>
+  </head>
+  <body>
+    <h1>
+      З клавіатури вводяться поступово числа. Знайти два найбільші числа. Ввід
+      здійснюється до тих пір, поки різниця між такими числами є більшою за 5.
+    </h1>
+    <script>
+      let maxOne = 0,
+        maxTwo = -Infinity;
+      const rangeStart = 1,
+        rangeEnd = 100;
+
+      while (true) {
+        const randomCompNum =
+          rangeStart + Math.floor(Math.random() * (rangeEnd - rangeStart + 1));
+					const userNum = parseInt(prompt("Введіть число", `${randomCompNum}`));
+        if (userNum > maxOne) {
+          maxTwo = maxOne;
+          maxOne = userNum;
+        } else if (userNum > maxTwo) maxTwo = userNum;
+        if (maxOne - maxTwo < 5) break;
+      }
+      document.write(`Max one - ${maxOne}, max two - ${maxTwo}`);
+    </script>
+  </body>
+</html>

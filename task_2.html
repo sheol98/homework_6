@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/style.css">
+    <title>Задача №2</title>
+  </head>
+  <body>
+    <h1>
+      4.1. З клавіатури вводяться два числа N i M (N менше M). Вивести на екран
+      числа
+    </h1>
+    <script>
+      let firstNum = parseInt(prompt("Введіть число N"));
+      let secondNum = parseInt(prompt("Введіть число M"));
+      if (firstNum > secondNum) alert("Ви ввели некоректне значення");
+      document.write("<ul>");
+      while (firstNum < secondNum) {
+        document.write(`<li>${firstNum}---${secondNum}</li>`);
+        firstNum++;
+        secondNum--;
+      }
+      document.write("<ul>");
+    </script>
+  </body>
+</html>

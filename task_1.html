@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Задача №1</title>
+  </head>
+  <body>
+    <h1>На екрані виводиться меню:</h1>
+    <ul>
+      <li>1.Ініціалізація (сума=0)</li>
+      <li>2.Додати 2</li>
+      <li>3.Додати 3</li>
+      <li>4.Відняти 2</li>
+      <li>5.Відняти 3</li>
+      <li>6.Вивести суму</li>
+      <li>7.Вихід.</li>
+    </ul>
+    <h1>
+      Шляхом поступового вибору відповідних пунктів спробувати отримати число N,
+      яке вводиться з клавіатури.
+    </h1>
+    <script>
+      let sum = 0;
+      let userAns = 0;
+      while (userAns !== 6 && userAns !== 7) {
+        userAns = parseInt(
+          prompt(
+            `1.Ініціалізація (сума=${sum})\n2.Додати 2\n3.Додати 3\n4.Відняти 2\n5.Відняти 3\n6.Вивести суму\n7.Вихід.`
+          )
+        );
+        switch (userAns) {
+          case 1:
+            break;
+          case 2:
+            sum += 2;
+            break;
+          case 3:
+            sum += 3;
+            break;
+          case 4:
+            sum -= 2;
+            break;
+          case 5:
+            sum -= 3;
+            break;
+          case 6:
+            alert("Виводиму суму");
+            break;
+          case 7:
+            alert("Допобачення");
+            break;
+          default:
+            alert("Значення некоректне");
+            break;
+        }
+      }
+      if (userAns === 6) document.write(`<h2>Сума = ${sum}</h2>`);
+    </script>
+  </body>
+</html>
